@@ -9,7 +9,7 @@ const getBaseUrl = () => {
   return config[environment].baseUrl;
 };
 
-Given("ผู้ใช้นำทางไปยังแอปพลิเคชัน", async function () {
+Given("ผู้ใช้นำทางไปยังหน้า Login", async function () {
   const url = process.env.webURL || getBaseUrl() + "/auth_ecommerce.html";
   await this.page.goto(url);
 });

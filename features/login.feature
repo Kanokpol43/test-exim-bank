@@ -4,7 +4,7 @@ Feature: เข้าสู่ระบบ
   So that ฉันสามารถเข้าใช้งานร้านค้า
 
   Background:
-    Given ผู้ใช้นำทางไปยังแอปพลิเคชัน
+    Given ผู้ใช้นำทางไปยังหน้า Login
 
   Scenario: Case 1 - กรอกข้อมูลถูกทั้งหมด (จาก example.json)
     When ผู้ใช้กรอกอีเมล "default"

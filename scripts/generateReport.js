@@ -9,14 +9,6 @@ const options = {
   reportSuiteAsScenarios: true,
   scenarioTimestamp: true,
   launchReport: false,
-  // metadata: {
-  //   'App Version': '1.0.0',
-  //   'Test Environment': 'Staging',
-  //   'Browser': 'Chrome',
-  //   'Platform': process.platform,
-  //   'Executed': 'Local',
-  //   'Execution Time': new Date().toISOString()
-  // }
 };
 
 if (!fs.existsSync("reports")) {
