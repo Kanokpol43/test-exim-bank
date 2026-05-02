@@ -1,0 +1,22 @@
+{
+  "name": "exim-bank",
+  "version": "1.0.0",
+  "description": "Playwright Cucumber BDD Test Framework for EXIM Bank",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "HEADED=true cucumber-js",
+    "test:debug": "HEADED=true SLOW_MO=1000 cucumber-js",
+    "test:report": "node scripts/generateReport.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^25.6.0",
+    "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^16.3.1",
+    "playwright": "^1.40.0"
+  }
+}

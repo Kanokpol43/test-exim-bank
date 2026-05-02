@@ -1,0 +1,11 @@
+{
+  "dev": {
+    "baseUrl": "http://localhost:3000"
+  },
+  "uat": {
+    "baseUrl": "https://uat-practice.razvanvancea.ro"
+  },
+  "production": {
+    "baseUrl": "https://qa-practice.razvanvancea.ro"
+  }
+}
