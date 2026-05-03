@@ -27,7 +27,6 @@ const loginAndNavigateToShop = async (page) => {
 Given("ผู้ใช้นำทางไปยังหน้า Login", async function () {
   const baseUrl = getBaseUrl();
   await this.page.goto(`${baseUrl}/auth_ecommerce.html`);
-  await this.page.locator("#email").waitFor({ state: "visible" });
 });
 
 When("ผู้ใช้กรอกอีเมล {string}", async function (email) {
