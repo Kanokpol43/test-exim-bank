@@ -1,12 +1,17 @@
 const { expect } = require("@playwright/test");
 
-const selectRandomOption = async (page, dropdownSelector, excludePlaceholder = true) => {
+const selectRandomOption = async (
+  page,
+  dropdownSelector,
+  excludePlaceholder = true,
+) => {
   const options = await page.$$eval(
     dropdownSelector + " option",
-    (els, exclude) => els
-      .map(el => el.value)
-      .filter(v => !exclude || (v !== "" && !v.includes("Select"))),
-    excludePlaceholder
+    (els, exclude) =>
+      els
+        .map((el) => el.value)
+        .filter((v) => !exclude || (v !== "" && !v.includes("Select"))),
+    excludePlaceholder,
   );
 
   const randomOption = options[Math.floor(Math.random() * options.length)];
@@ -16,13 +21,13 @@ const selectRandomOption = async (page, dropdownSelector, excludePlaceholder = t
   return randomOption;
 };
 
-const checkValidationError = async (page, fieldSelector) => {
+const checkValidationRequiredFill = async (page, fieldSelector) => {
   const field = page.locator(fieldSelector);
-  const validationMsg = await field.evaluate(el => el.validationMessage);
+  const validationMsg = await field.evaluate((el) => el.validationMessage);
   expect(validationMsg).toBeTruthy();
 };
 
 module.exports = {
   selectRandomOption,
-  checkValidationError,
+  checkValidationRequiredFill,
 };

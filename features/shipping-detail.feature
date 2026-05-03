@@ -15,29 +15,30 @@ Feature: จัดส่งสินค้า
 
     Scenario: Case 1 - กรอกข้อมูลจัดส่งครบถ้วน (Phone, Street, City, Country)
         When ผู้ใช้กรอกเบอร์โทรศัพท์
-        When ผู้ใช้กรอกที่อยู่
-        When ผู้ใช้กรอกชื่อเมือง
-        When ผู้ใช้เลือกประเทศ
+        And ผู้ใช้กรอกที่อยู่
+        And ผู้ใช้กรอกชื่อเมือง
+        And ผู้ใช้เลือกประเทศ
         When ผู้ใช้คลิกปุ่ม Submit Order
+        When ผู้ใช้ควรเจอหน้า Congrate You order
 
     Scenario: Case 2 - ไม่กรอกเบอร์โทรศัพท์
         When ผู้ใช้กรอกที่อยู่
-        When ผู้ใช้กรอกชื่อเมือง
-        When ผู้ใช้เลือกประเทศ
+        And ผู้ใช้กรอกชื่อเมือง
+        And ผู้ใช้เลือกประเทศ
         When ผู้ใช้คลิกปุ่ม Submit Order
         Then ผู้ใช้ควรเจอ Required Message สำหรับ "#phone"
 
     Scenario: Case 3 - ไม่กรอกที่อยู่
         When ผู้ใช้กรอกเบอร์โทรศัพท์
-        When ผู้ใช้กรอกชื่อเมือง
-        When ผู้ใช้เลือกประเทศ
+        And ผู้ใช้กรอกชื่อเมือง
+        And ผู้ใช้เลือกประเทศ
         When ผู้ใช้คลิกปุ่ม Submit Order
         Then ผู้ใช้ควรเจอ Required Message สำหรับ "[name='street']"
 
     Scenario: Case 4 - ไม่กรอกชื่อเมือง
         When ผู้ใช้กรอกเบอร์โทรศัพท์
-        When ผู้ใช้กรอกที่อยู่
-        When ผู้ใช้เลือกประเทศ
+        And ผู้ใช้กรอกที่อยู่
+        And ผู้ใช้เลือกประเทศ
         When ผู้ใช้คลิกปุ่ม Submit Order
         Then ผู้ใช้ควรเจอ Required Message สำหรับ "[name='city']"
 

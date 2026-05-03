@@ -1,6 +1,9 @@
 const { When, Then } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
-const { selectRandomOption, checkValidationError } = require("./helpers");
+const {
+  selectRandomOption,
+  checkValidationRequiredFill,
+} = require("./helpers");
 
 let faker;
 
@@ -34,6 +37,15 @@ When("ผู้ใช้คลิกปุ่ม Submit Order", async function (
   await this.page.click("#submitOrderBtn");
 });
 
-Then("ผู้ใช้ควรเจอ Required Message สำหรับ {string}", async function (fieldSelector) {
-  await checkValidationError(this.page, fieldSelector);
+Then(
+  "ผู้ใช้ควรเจอ Required Message สำหรับ {string}",
+  async function (fieldSelector) {
+    await checkValidationRequiredFill(this.page, fieldSelector);
+  },
+);
+
+Then("ผู้ใช้ควรเจอหน้า Congrate You order", async function () {
+  await expect(this.page.locator("#message")).toContainText(
+    "Congrats! Your order of ",
+  );
 });
