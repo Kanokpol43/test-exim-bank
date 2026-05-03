@@ -1,8 +1,13 @@
-const { When, Then } = require("@cucumber/cucumber");
+const { When, Then, Before } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
 
 let cartTotal = 0;
 let itemPrices = [];
+
+Before(function () {
+  cartTotal = 0;
+  itemPrices = [];
+});
 
 When(
   "ผู้ใช้เลือกสินค้า {string} จำนวน {int} ชิ้น",
