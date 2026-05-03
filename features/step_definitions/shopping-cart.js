@@ -29,14 +29,17 @@ When(
     await this.page.keyboard.press("Enter");
   },
 );
+When("ผู้ใช้คลิกปุ่ม {string}", async function (buttonName) {
+  await this.page.locator(`button:has-text("${buttonName}")`).click();
+});
 
-Then("ยอดรวมควรมีราคา ${float}", async function (expectedTotal) {
+Then("ยอดรวมควรมีราคา {float}", async function (expectedTotal) {
   expect(cartTotal).toBeCloseTo(expectedTotal);
 
   itemPrices = [];
   cartTotal = 0;
 });
 
-When("ผู้ใช้คลิกปุ่ม {string}", async function (buttonName) {
-  await this.page.locator(`button:has-text("${buttonName}")`).click();
+Then("ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า", async function () {
+  await expect(this.page.locator("#shippingForm")).toBeVisible();
 });
