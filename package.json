@@ -11,12 +11,17 @@
     "test:login:headed": "HEADED=true cucumber-js features/login.feature",
     "test:shopping": "cucumber-js features/shopping-cart.feature",
     "test:shopping:headed": "HEADED=true cucumber-js features/shopping-cart.feature",
+    "test:shipping-detail": "cucumber-js features/shipping-detail.feature",
+    "test:shipping-detail:headed": "HEADED=true cucumber-js features/shipping-detail.feature",
+    "test:e2e": "cucumber-js features/e2e.feature",
+    "test:e2e:headed": "HEADED=true cucumber-js features/e2e.feature",
     "test:report": "node scripts/generateReport.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^9.5.1",
+    "@faker-js/faker": "^10.4.0",
     "@playwright/test": "^1.40.0",
     "@types/node": "^25.6.0",
     "cucumber-html-reporter": "^7.1.1",
