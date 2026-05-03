@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 445505459
+              "duration": 382572541
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 7,
             "name": "ผู้ใช้นำทางไปยังหน้า Login",
             "match": {
-              "location": "features/step_definitions/login.js:12"
+              "location": "features/step_definitions/login.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1966454999
+              "duration": 1527052874
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 10,
             "name": "ผู้ใช้กรอกอีเมล \"default\"",
             "match": {
-              "location": "features/step_definitions/login.js:17"
+              "location": "features/step_definitions/login.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 54778584
+              "duration": 44478833
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 11,
             "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
             "match": {
-              "location": "features/step_definitions/login.js:23"
+              "location": "features/step_definitions/login.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 45894166
+              "duration": 54275083
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 12,
             "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
             "match": {
-              "location": "features/step_definitions/login.js:30"
+              "location": "features/step_definitions/login.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 33904916
+              "duration": 30775832
             }
           },
           {
@@ -75,19 +75,11 @@
             "line": 13,
             "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
             "match": {
-              "location": "features/step_definitions/login.js:34"
+              "location": "features/step_definitions/login.js:49"
             },
             "result": {
               "status": "passed",
-              "duration": 3011457
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1037229832
+              "duration": 2469791
             }
           }
         ],
@@ -106,7 +98,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 445608542
+              "duration": 382440250
             }
           },
           {
@@ -115,11 +107,11 @@
             "line": 7,
             "name": "ผู้ใช้นำทางไปยังหน้า Login",
             "match": {
-              "location": "features/step_definitions/login.js:12"
+              "location": "features/step_definitions/login.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 2093980958
+              "duration": 1527162583
             }
           },
           {
@@ -128,11 +120,11 @@
             "line": 16,
             "name": "ผู้ใช้กรอกอีเมล \"default\"",
             "match": {
-              "location": "features/step_definitions/login.js:17"
+              "location": "features/step_definitions/login.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 41772165
+              "duration": 44489583
             }
           },
           {
@@ -141,11 +133,11 @@
             "line": 17,
             "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
             "match": {
-              "location": "features/step_definitions/login.js:23"
+              "location": "features/step_definitions/login.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 42512874
+              "duration": 54271124
             }
           },
           {
@@ -154,11 +146,11 @@
             "line": 18,
             "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
             "match": {
-              "location": "features/step_definitions/login.js:30"
+              "location": "features/step_definitions/login.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 24685375
+              "duration": 30461667
             }
           },
           {
@@ -167,19 +159,11 @@
             "line": 19,
             "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
             "match": {
-              "location": "features/step_definitions/login.js:38"
+              "location": "features/step_definitions/login.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 5407832
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1029934999
+              "duration": 4929916
             }
           }
         ],
@@ -198,7 +182,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 142261666
+              "duration": 155141415
             }
           },
           {
@@ -207,11 +191,11 @@
             "line": 7,
             "name": "ผู้ใช้นำทางไปยังหน้า Login",
             "match": {
-              "location": "features/step_definitions/login.js:12"
+              "location": "features/step_definitions/login.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1332511207
+              "duration": 1346773500
             }
           },
           {
@@ -220,11 +204,11 @@
             "line": 16,
             "name": "ผู้ใช้กรอกอีเมล \"wrongemail@example.com\"",
             "match": {
-              "location": "features/step_definitions/login.js:17"
+              "location": "features/step_definitions/login.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 30447458
+              "duration": 34116207
             }
           },
           {
@@ -233,11 +217,11 @@
             "line": 17,
             "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
             "match": {
-              "location": "features/step_definitions/login.js:23"
+              "location": "features/step_definitions/login.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 50202459
+              "duration": 56696624
             }
           },
           {
@@ -246,11 +230,11 @@
             "line": 18,
             "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
             "match": {
-              "location": "features/step_definitions/login.js:30"
+              "location": "features/step_definitions/login.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 26743749
+              "duration": 22708707
             }
           },
           {
@@ -259,19 +243,11 @@
             "line": 19,
             "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
             "match": {
-              "location": "features/step_definitions/login.js:38"
+              "location": "features/step_definitions/login.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 5088707
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1038164665
+              "duration": 5150374
             }
           }
         ],
@@ -290,7 +266,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 157094834
+              "duration": 153824249
             }
           },
           {
@@ -299,11 +275,11 @@
             "line": 7,
             "name": "ผู้ใช้นำทางไปยังหน้า Login",
             "match": {
-              "location": "features/step_definitions/login.js:12"
+              "location": "features/step_definitions/login.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1211049999
+              "duration": 1346517165
             }
           },
           {
@@ -312,11 +288,11 @@
             "line": 16,
             "name": "ผู้ใช้กรอกอีเมล \"wrongemail@example.com\"",
             "match": {
-              "location": "features/step_definitions/login.js:17"
+              "location": "features/step_definitions/login.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 32012874
+              "duration": 33600333
             }
           },
           {
@@ -325,11 +301,11 @@
             "line": 17,
             "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
             "match": {
-              "location": "features/step_definitions/login.js:23"
+              "location": "features/step_definitions/login.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 58323832
+              "duration": 57236249
             }
           },
           {
@@ -338,11 +314,11 @@
             "line": 18,
             "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
             "match": {
-              "location": "features/step_definitions/login.js:30"
+              "location": "features/step_definitions/login.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 27474709
+              "duration": 23923458
             }
           },
           {
@@ -351,98 +327,11 @@
             "line": 19,
             "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
             "match": {
-              "location": "features/step_definitions/login.js:38"
+              "location": "features/step_definitions/login.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3602916
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1039034999
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;case-5---กรอกเฉพาะข้อมูลอีเมล",
-        "keyword": "Scenario",
-        "line": 33,
-        "name": "Case 5 - กรอกเฉพาะข้อมูลอีเมล",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 164687417
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1205480666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 34,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29736750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 35,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:30"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 20064875
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3160667
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1032124417
+              "duration": 3838000
             }
           }
         ],
@@ -461,7 +350,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 164359250
+              "duration": 173004541
             }
           },
           {
@@ -470,11 +359,11 @@
             "line": 7,
             "name": "ผู้ใช้นำทางไปยังหน้า Login",
             "match": {
-              "location": "features/step_definitions/login.js:12"
+              "location": "features/step_definitions/login.js:27"
             },
             "result": {
               "status": "passed",
-              "duration": 1586481250
+              "duration": 1237867291
             }
           },
           {
@@ -483,11 +372,11 @@
             "line": 39,
             "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
             "match": {
-              "location": "features/step_definitions/login.js:23"
+              "location": "features/step_definitions/login.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 64217624
+              "duration": 69181500
             }
           },
           {
@@ -496,11 +385,11 @@
             "line": 40,
             "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
             "match": {
-              "location": "features/step_definitions/login.js:30"
+              "location": "features/step_definitions/login.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 25285625
+              "duration": 22914791
             }
           },
           {
@@ -509,19 +398,82 @@
             "line": 41,
             "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
             "match": {
-              "location": "features/step_definitions/login.js:38"
+              "location": "features/step_definitions/login.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3861666
+              "duration": 3267417
             }
-          },
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "เข้าสู่ระบบ;case-5---กรอกเฉพาะข้อมูลอีเมล",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Case 5 - กรอกเฉพาะข้อมูลอีเมล",
+        "steps": [
           {
-            "keyword": "After",
+            "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1029158416
+              "duration": 172899749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "ผู้ใช้นำทางไปยังหน้า Login",
+            "match": {
+              "location": "features/step_definitions/login.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1239063624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "ผู้ใช้กรอกอีเมล \"default\"",
+            "match": {
+              "location": "features/step_definitions/login.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27632374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
+            "match": {
+              "location": "features/step_definitions/login.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19068084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
+            "match": {
+              "location": "features/step_definitions/login.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3311791
             }
           }
         ],

@@ -7,6 +7,10 @@
     "test": "cucumber-js",
     "test:headed": "HEADED=true cucumber-js",
     "test:debug": "HEADED=true SLOW_MO=1000 cucumber-js",
+    "test:login": "cucumber-js features/login.feature",
+    "test:login:headed": "HEADED=true cucumber-js features/login.feature",
+    "test:shopping": "cucumber-js features/shopping-cart.feature",
+    "test:shopping:headed": "HEADED=true cucumber-js features/shopping-cart.feature",
     "test:report": "node scripts/generateReport.js"
   },
   "author": "",
