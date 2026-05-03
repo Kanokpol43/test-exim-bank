@@ -6,13 +6,21 @@ const {
 } = require("./helpers");
 
 let faker;
+let shippingData = {
+  street: "",
+  city: "",
+  country: "",
+};
 
 (async () => {
   faker = await import("@faker-js/faker");
 })();
 
 When("ผู้ใช้เลือกประเทศ", async function () {
-  await selectRandomOption(this.page, "#countries_dropdown_menu");
+  shippingData.country = await selectRandomOption(
+    this.page,
+    "#countries_dropdown_menu",
+  );
 });
 
 When("ผู้ใช้กรอกเบอร์โทรศัพท์", async function () {
@@ -22,15 +30,19 @@ When("ผู้ใช้กรอกเบอร์โทรศัพท์", as
 });
 
 When("ผู้ใช้กรอกที่อยู่", async function () {
-  const streetAddress = faker.faker.location.streetAddress();
-  await this.page.fill('[name="street"]', streetAddress);
-  await expect(this.page.locator('[name="street"]')).toHaveValue(streetAddress);
+  shippingData.street = faker.faker.location.streetAddress();
+  await this.page.fill('[name="street"]', shippingData.street);
+  await expect(this.page.locator('[name="street"]')).toHaveValue(
+    shippingData.street,
+  );
 });
 
 When("ผู้ใช้กรอกชื่อเมือง", async function () {
-  const cityName = faker.faker.location.city();
-  await this.page.fill('[name="city"]', cityName);
-  await expect(this.page.locator('[name="city"]')).toHaveValue(cityName);
+  shippingData.city = faker.faker.location.city();
+  await this.page.fill('[name="city"]', shippingData.city);
+  await expect(this.page.locator('[name="city"]')).toHaveValue(
+    shippingData.city,
+  );
 });
 
 When("ผู้ใช้คลิกปุ่ม Submit Order", async function () {
@@ -44,8 +56,7 @@ Then(
   },
 );
 
-Then("ผู้ใช้ควรเจอหน้า Congrate You order", async function () {
-  await expect(this.page.locator("#message")).toContainText(
-    "Congrats! Your order of ",
-  );
+Then("ผู้ใช้ควรเจอหน้าสรุปที่อยู่ถูกต้อง", async function () {
+  const expectedAddress = `${shippingData.street}, ${shippingData.city} - ${shippingData.country}`;
+  await expect(this.page.locator("#message")).toContainText(expectedAddress);
 });
