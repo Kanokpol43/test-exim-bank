@@ -4,98 +4,6 @@
     "elements": [
       {
         "description": "",
-        "id": "เข้าสู่ระบบ;เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "keyword": "Scenario Outline",
-        "line": 23,
-        "name": "เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 213309957
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 40209
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1303936167
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 42412458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 57790707
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29417959
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4853666
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
         "id": "เข้าสู่ระบบ;case-1---กรอกข้อมูลถูกทั้งหมด-(จาก-example.json)",
         "keyword": "Scenario",
         "line": 9,
@@ -106,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 216161541
+              "duration": 220359708
             }
           },
           {
@@ -114,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33124
+              "duration": 23957
             }
           },
           {
@@ -127,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1307602542
+              "duration": 2030700333
             }
           },
           {
@@ -140,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38752541
+              "duration": 40997207
             }
           },
           {
@@ -153,7 +61,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55272917
+              "duration": 47112375
             }
           },
           {
@@ -166,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28410665
+              "duration": 26490958
             }
           },
           {
@@ -179,7 +87,99 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2585000
+              "duration": 2453499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "เข้าสู่ระบบ;เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 132259332
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 21582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "ผู้ใช้นำทางไปยังหน้า Login",
+            "match": {
+              "location": "features/step_definitions/login.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1231966332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "ผู้ใช้กรอกอีเมล \"default\"",
+            "match": {
+              "location": "features/step_definitions/login.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31569209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
+            "match": {
+              "location": "features/step_definitions/login.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39864666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
+            "match": {
+              "location": "features/step_definitions/login.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27116667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
+            "match": {
+              "location": "features/step_definitions/login.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4840750
             }
           }
         ],
@@ -198,7 +198,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 157602417
+              "duration": 132241666
             }
           },
           {
@@ -206,7 +206,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 22500
+              "duration": 18958
             }
           },
           {
@@ -219,7 +219,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1254714124
+              "duration": 1214204499
             }
           },
           {
@@ -232,7 +232,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29001166
+              "duration": 26972999
             }
           },
           {
@@ -245,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 50545167
+              "duration": 35457874
             }
           },
           {
@@ -258,7 +258,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25947416
+              "duration": 24766375
             }
           },
           {
@@ -271,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5649957
+              "duration": 4175707
             }
           }
         ],
@@ -290,7 +290,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 154180208
+              "duration": 138003708
             }
           },
           {
@@ -298,7 +298,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31833
+              "duration": 18208
             }
           },
           {
@@ -311,7 +311,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1254316667
+              "duration": 1227825541
             }
           },
           {
@@ -324,7 +324,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29000166
+              "duration": 27417917
             }
           },
           {
@@ -337,7 +337,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 50559249
+              "duration": 39190166
             }
           },
           {
@@ -350,7 +350,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27620584
+              "duration": 26206707
             }
           },
           {
@@ -363,7 +363,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5302290
+              "duration": 3971708
             }
           }
         ],
@@ -382,7 +382,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 160084707
+              "duration": 134181875
             }
           },
           {
@@ -390,7 +390,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19375
+              "duration": 14458
             }
           },
           {
@@ -403,7 +403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1313083290
+              "duration": 1209222208
             }
           },
           {
@@ -416,7 +416,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28754374
+              "duration": 26978500
             }
           },
           {
@@ -429,7 +429,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23855792
+              "duration": 22761708
             }
           },
           {
@@ -442,7 +442,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35416334
+              "duration": 3015249
             }
           }
         ],
@@ -461,7 +461,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 159430624
+              "duration": 140252249
             }
           },
           {
@@ -469,7 +469,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27916
+              "duration": 22167
             }
           },
           {
@@ -482,7 +482,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1304149667
+              "duration": 1229063375
             }
           },
           {
@@ -495,7 +495,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 68985541
+              "duration": 57472666
             }
           },
           {
@@ -508,7 +508,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27546750
+              "duration": 25772541
             }
           },
           {
@@ -521,7 +521,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3554750
+              "duration": 3754500
             }
           }
         ],
@@ -535,6 +535,252 @@
     "name": "เข้าสู่ระบบ",
     "tags": [],
     "uri": "features/login.feature"
+  },
+  {
+    "description": "    As a ผู้ใช้\n    I want to เข้าสู่ระบบเพื่อทำการสั่งซื้อสินค้าจากเริ่มต้น\n    So that ฉันสามารถยืนยันคำสั่งซื้อและได้รับการยืนยันที่อยู่ที่ถูกต้อง",
+    "elements": [
+      {
+        "description": "",
+        "id": "e2e---สั่งซื้อสินค้า;e2e---step-1-4-complete-checkout-flow",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "E2E - Step 1-4 Complete Checkout Flow",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 220741915
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "ผู้ใช้นำทางไปยังหน้า Login",
+            "match": {
+              "location": "features/step_definitions/login.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2020722333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "ผู้ใช้กรอกอีเมล \"default\"",
+            "match": {
+              "location": "features/step_definitions/login.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39190458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
+            "match": {
+              "location": "features/step_definitions/login.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58372542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
+            "match": {
+              "location": "features/step_definitions/login.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26287959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
+            "match": {
+              "location": "features/step_definitions/login.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2667500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 2 ชิ้น",
+            "match": {
+              "location": "features/step_definitions/shopping-cart.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 307645459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "ผู้ใช้เลือกสินค้า \"Gucci Bloom Eau de\" จำนวน 3 ชิ้น",
+            "match": {
+              "location": "features/step_definitions/shopping-cart.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22826833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "ยอดรวมควรมีราคา 419.95",
+            "match": {
+              "location": "features/step_definitions/shopping-cart.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1572458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
+            "match": {
+              "location": "features/step_definitions/shopping-cart.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20838874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
+            "match": {
+              "location": "features/step_definitions/shopping-cart.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2997540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5157333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "ผู้ใช้กรอกที่อยู่",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6957667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "ผู้ใช้กรอกชื่อเมือง",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5912542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "ผู้ใช้เลือกประเทศ",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19938291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21855666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "ผู้ใช้ควรเจอหน้าสรุปที่อยู่ถูกต้อง",
+            "match": {
+              "location": "features/step_definitions/shipping-detail.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2194500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "e2e---สั่งซื้อสินค้า",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "E2E - สั่งซื้อสินค้า",
+    "tags": [],
+    "uri": "features/e2e.feature"
   },
   {
     "description": "    As a ผู้ใช้\n    I want to กรอกข้อมูลจัดส่ง\n    So that ฉันสามารถยืนยันคำสั่งซื้อได้",
@@ -551,7 +797,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 156999707
+              "duration": 132025040
             }
           },
           {
@@ -559,7 +805,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 19209
+              "duration": 13624
             }
           },
           {
@@ -572,7 +818,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1398434375
+              "duration": 1216282458
             }
           },
           {
@@ -585,7 +831,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30203375
+              "duration": 27814333
             }
           },
           {
@@ -598,7 +844,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41020791
+              "duration": 36438707
             }
           },
           {
@@ -611,7 +857,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21821249
+              "duration": 27182291
             }
           },
           {
@@ -624,7 +870,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1795915
+              "duration": 1948457
             }
           },
           {
@@ -637,7 +883,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 318751957
+              "duration": 309902874
             }
           },
           {
@@ -650,7 +896,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27601540
+              "duration": 19862333
             }
           },
           {
@@ -663,7 +909,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3409082
+              "duration": 1433500
             }
           },
           {
@@ -672,11 +918,11 @@
             "line": 17,
             "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:18"
+              "location": "features/step_definitions/shipping-detail.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 7192291
+              "duration": 4136875
             }
           },
           {
@@ -685,11 +931,11 @@
             "line": 18,
             "name": "ผู้ใช้กรอกที่อยู่",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:24"
+              "location": "features/step_definitions/shipping-detail.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 9060500
+              "duration": 5195917
             }
           },
           {
@@ -698,11 +944,11 @@
             "line": 19,
             "name": "ผู้ใช้กรอกชื่อเมือง",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:30"
+              "location": "features/step_definitions/shipping-detail.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 5122375
+              "duration": 3968499
             }
           },
           {
@@ -711,11 +957,11 @@
             "line": 20,
             "name": "ผู้ใช้เลือกประเทศ",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:14"
+              "location": "features/step_definitions/shipping-detail.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 22355166
+              "duration": 18962875
             }
           },
           {
@@ -724,24 +970,24 @@
             "line": 21,
             "name": "ผู้ใช้คลิกปุ่ม Submit Order",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:36"
+              "location": "features/step_definitions/shipping-detail.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 16618207
+              "duration": 21922625
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Then ",
             "line": 22,
-            "name": "ผู้ใช้ควรเจอหน้า Congrate You order",
+            "name": "ผู้ใช้ควรเจอหน้าสรุปที่อยู่ถูกต้อง",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:47"
+              "location": "features/step_definitions/shipping-detail.js:59"
             },
             "result": {
               "status": "passed",
-              "duration": 2542457
+              "duration": 1243875
             }
           }
         ],
@@ -760,7 +1006,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 153897708
+              "duration": 141207999
             }
           },
           {
@@ -768,7 +1014,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40417
+              "duration": 15791
             }
           },
           {
@@ -781,7 +1027,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1385693416
+              "duration": 1238870333
             }
           },
           {
@@ -794,7 +1040,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28997207
+              "duration": 28523709
             }
           },
           {
@@ -807,7 +1053,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55040333
+              "duration": 38801332
             }
           },
           {
@@ -820,7 +1066,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21364458
+              "duration": 24112041
             }
           },
           {
@@ -833,7 +1079,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2697041
+              "duration": 1665582
             }
           },
           {
@@ -846,7 +1092,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 318299250
+              "duration": 309596542
             }
           },
           {
@@ -859,7 +1105,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27565542
+              "duration": 20106291
             }
           },
           {
@@ -872,7 +1118,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3282750
+              "duration": 2847417
             }
           },
           {
@@ -881,11 +1127,11 @@
             "line": 25,
             "name": "ผู้ใช้กรอกที่อยู่",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:24"
+              "location": "features/step_definitions/shipping-detail.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 7925124
+              "duration": 6794207
             }
           },
           {
@@ -894,11 +1140,11 @@
             "line": 26,
             "name": "ผู้ใช้กรอกชื่อเมือง",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:30"
+              "location": "features/step_definitions/shipping-detail.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 8357833
+              "duration": 5904333
             }
           },
           {
@@ -907,11 +1153,11 @@
             "line": 27,
             "name": "ผู้ใช้เลือกประเทศ",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:14"
+              "location": "features/step_definitions/shipping-detail.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 21437541
+              "duration": 19747666
             }
           },
           {
@@ -920,11 +1166,11 @@
             "line": 28,
             "name": "ผู้ใช้คลิกปุ่ม Submit Order",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:36"
+              "location": "features/step_definitions/shipping-detail.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 27983583
+              "duration": 24474082
             }
           },
           {
@@ -933,11 +1179,11 @@
             "line": 29,
             "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"#phone\"",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
+              "location": "features/step_definitions/shipping-detail.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 6538290
+              "duration": 4960750
             }
           }
         ],
@@ -956,7 +1202,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 160596791
+              "duration": 135104124
             }
           },
           {
@@ -964,7 +1210,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17082
+              "duration": 13791
             }
           },
           {
@@ -977,7 +1223,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1265847917
+              "duration": 1214823166
             }
           },
           {
@@ -990,7 +1236,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30541957
+              "duration": 29548542
             }
           },
           {
@@ -1003,7 +1249,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56095291
+              "duration": 40421500
             }
           },
           {
@@ -1016,7 +1262,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 26505499
+              "duration": 24393957
             }
           },
           {
@@ -1029,7 +1275,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2822749
+              "duration": 1681625
             }
           },
           {
@@ -1042,7 +1288,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 237042874
+              "duration": 309397542
             }
           },
           {
@@ -1055,7 +1301,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28472375
+              "duration": 20913042
             }
           },
           {
@@ -1068,7 +1314,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2418499
+              "duration": 2626667
             }
           },
           {
@@ -1077,11 +1323,11 @@
             "line": 32,
             "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:18"
+              "location": "features/step_definitions/shipping-detail.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 6714209
+              "duration": 3904334
             }
           },
           {
@@ -1090,11 +1336,11 @@
             "line": 33,
             "name": "ผู้ใช้กรอกชื่อเมือง",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:30"
+              "location": "features/step_definitions/shipping-detail.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 7134417
+              "duration": 5942333
             }
           },
           {
@@ -1103,11 +1349,11 @@
             "line": 34,
             "name": "ผู้ใช้เลือกประเทศ",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:14"
+              "location": "features/step_definitions/shipping-detail.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 20996041
+              "duration": 18701124
             }
           },
           {
@@ -1116,11 +1362,11 @@
             "line": 35,
             "name": "ผู้ใช้คลิกปุ่ม Submit Order",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:36"
+              "location": "features/step_definitions/shipping-detail.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 29310417
+              "duration": 26375125
             }
           },
           {
@@ -1129,11 +1375,11 @@
             "line": 36,
             "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"[name='street']\"",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
+              "location": "features/step_definitions/shipping-detail.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 9883332
+              "duration": 6618958
             }
           }
         ],
@@ -1152,7 +1398,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 151904083
+              "duration": 155723875
             }
           },
           {
@@ -1160,7 +1406,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 21750
+              "duration": 11291
             }
           },
           {
@@ -1173,7 +1419,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1266559957
+              "duration": 1220611457
             }
           },
           {
@@ -1186,7 +1432,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29822666
+              "duration": 28336792
             }
           },
           {
@@ -1199,7 +1445,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56180875
+              "duration": 41650208
             }
           },
           {
@@ -1212,7 +1458,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28217000
+              "duration": 23844249
             }
           },
           {
@@ -1225,7 +1471,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1922791
+              "duration": 1656957
             }
           },
           {
@@ -1238,7 +1484,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 219058375
+              "duration": 309633458
             }
           },
           {
@@ -1251,7 +1497,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29338541
+              "duration": 28945999
             }
           },
           {
@@ -1264,7 +1510,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1995666
+              "duration": 2715165
             }
           },
           {
@@ -1273,11 +1519,11 @@
             "line": 39,
             "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:18"
+              "location": "features/step_definitions/shipping-detail.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 6958833
+              "duration": 7687916
             }
           },
           {
@@ -1286,11 +1532,11 @@
             "line": 40,
             "name": "ผู้ใช้กรอกที่อยู่",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:24"
+              "location": "features/step_definitions/shipping-detail.js:32"
             },
             "result": {
               "status": "passed",
-              "duration": 6304791
+              "duration": 7455082
             }
           },
           {
@@ -1299,11 +1545,11 @@
             "line": 41,
             "name": "ผู้ใช้เลือกประเทศ",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:14"
+              "location": "features/step_definitions/shipping-detail.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 22271667
+              "duration": 23869042
             }
           },
           {
@@ -1312,11 +1558,11 @@
             "line": 42,
             "name": "ผู้ใช้คลิกปุ่ม Submit Order",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:36"
+              "location": "features/step_definitions/shipping-detail.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 28051792
+              "duration": 24720375
             }
           },
           {
@@ -1325,11 +1571,11 @@
             "line": 43,
             "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"[name='city']\"",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
+              "location": "features/step_definitions/shipping-detail.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 4476500
+              "duration": 4533500
             }
           }
         ],
@@ -1348,7 +1594,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 194425333
+              "duration": 148181459
             }
           },
           {
@@ -1356,7 +1602,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17667
+              "duration": 9500
             }
           },
           {
@@ -1369,7 +1615,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1330822208
+              "duration": 1212649374
             }
           },
           {
@@ -1382,7 +1628,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33630042
+              "duration": 36434459
             }
           },
           {
@@ -1395,7 +1641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 56360833
+              "duration": 52758625
             }
           },
           {
@@ -1408,7 +1654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29795374
+              "duration": 28128957
             }
           },
           {
@@ -1421,7 +1667,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2596333
+              "duration": 1843791
             }
           },
           {
@@ -1434,7 +1680,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 235721042
+              "duration": 234484833
             }
           },
           {
@@ -1447,7 +1693,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28339749
+              "duration": 30234916
             }
           },
           {
@@ -1460,7 +1706,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1932375
+              "duration": 1646624
             }
           },
           {
@@ -1469,11 +1715,11 @@
             "line": 46,
             "name": "ผู้ใช้คลิกปุ่ม Submit Order",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:36"
+              "location": "features/step_definitions/shipping-detail.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 23369375
+              "duration": 21984124
             }
           },
           {
@@ -1482,11 +1728,11 @@
             "line": 47,
             "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"#phone\"",
             "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
+              "location": "features/step_definitions/shipping-detail.js:52"
             },
             "result": {
               "status": "passed",
-              "duration": 17894416
+              "duration": 18487082
             }
           }
         ],
@@ -1516,7 +1762,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 171023166
+              "duration": 178627833
             }
           },
           {
@@ -1524,7 +1770,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20833
+              "duration": 18750
             }
           },
           {
@@ -1537,7 +1783,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1332731415
+              "duration": 1217232374
             }
           },
           {
@@ -1550,7 +1796,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32030917
+              "duration": 58801790
             }
           },
           {
@@ -1563,7 +1809,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55689292
+              "duration": 48976499
             }
           },
           {
@@ -1576,7 +1822,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29815749
+              "duration": 24962792
             }
           },
           {
@@ -1589,7 +1835,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1920915
+              "duration": 1853959
             }
           },
           {
@@ -1602,7 +1848,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 238762042
+              "duration": 227617583
             }
           },
           {
@@ -1615,7 +1861,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28894625
+              "duration": 30626459
             }
           },
           {
@@ -1628,7 +1874,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1271542
+              "duration": 1163332
             }
           },
           {
@@ -1641,7 +1887,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29117958
+              "duration": 30088749
             }
           },
           {
@@ -1654,7 +1900,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2648499
+              "duration": 2326749
             }
           }
         ],
@@ -1673,7 +1919,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 202667000
+              "duration": 176471583
             }
           },
           {
@@ -1681,7 +1927,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16832
+              "duration": 32041
             }
           },
           {
@@ -1694,7 +1940,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1394417416
+              "duration": 1282290584
             }
           },
           {
@@ -1707,7 +1953,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33939083
+              "duration": 33508624
             }
           },
           {
@@ -1720,7 +1966,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 60562541
+              "duration": 41622165
             }
           },
           {
@@ -1733,7 +1979,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29186708
+              "duration": 22857249
             }
           },
           {
@@ -1746,7 +1992,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1910541
+              "duration": 1807208
             }
           },
           {
@@ -1759,7 +2005,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 322135333
+              "duration": 323059042
             }
           },
           {
@@ -1772,7 +2018,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 476375
+              "duration": 423000
             }
           },
           {
@@ -1785,7 +2031,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24699709
+              "duration": 23383915
             }
           },
           {
@@ -1798,7 +2044,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2147249
+              "duration": 1902666
             }
           }
         ],
@@ -1817,7 +2063,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 195552791
+              "duration": 181676291
             }
           },
           {
@@ -1825,7 +2071,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20708
+              "duration": 12791
             }
           },
           {
@@ -1838,7 +2084,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1393662417
+              "duration": 1217721874
             }
           },
           {
@@ -1851,7 +2097,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34928249
+              "duration": 32441707
             }
           },
           {
@@ -1864,7 +2110,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 59670041
+              "duration": 44411208
             }
           },
           {
@@ -1877,7 +2123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30444583
+              "duration": 30231042
             }
           },
           {
@@ -1890,7 +2136,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1589416
+              "duration": 1999958
             }
           },
           {
@@ -1903,7 +2149,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 229759291
+              "duration": 244337625
             }
           },
           {
@@ -1916,7 +2162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1540000
+              "duration": 577541
             }
           },
           {
@@ -1929,7 +2175,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23708375
+              "duration": 26869375
             }
           },
           {
@@ -1942,7 +2188,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2136042
+              "duration": 1654749
             }
           }
         ],
@@ -1961,7 +2207,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 205968208
+              "duration": 171240665
             }
           },
           {
@@ -1969,7 +2215,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14041
+              "duration": 16499
             }
           },
           {
@@ -1982,7 +2228,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1258582207
+              "duration": 1231177250
             }
           },
           {
@@ -1995,7 +2241,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30496124
+              "duration": 29259167
             }
           },
           {
@@ -2008,7 +2254,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45101208
+              "duration": 37243875
             }
           },
           {
@@ -2021,7 +2267,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23217791
+              "duration": 27038333
             }
           },
           {
@@ -2034,7 +2280,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2165042
+              "duration": 1662374
             }
           },
           {
@@ -2047,7 +2293,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 309131000
+              "duration": 309708292
             }
           },
           {
@@ -2060,7 +2306,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 352665
+              "duration": 209541
             }
           },
           {
@@ -2073,7 +2319,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27863208
+              "duration": 19635540
             }
           },
           {
@@ -2086,7 +2332,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2306166
+              "duration": 3182584
             }
           }
         ],
