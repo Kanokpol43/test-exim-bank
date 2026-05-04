@@ -12,6 +12,7 @@ Before(async function () {
   });
   this.context = await this.browser.newContext();
   this.page = await this.context.newPage();
+  this.page.setDefaultNavigationTimeout(60000); // 60s for page navigation
 });
 
 // After(async function () {
