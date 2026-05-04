@@ -1,11 +1,14 @@
 {
   "dev": {
-    "baseUrl": "http://localhost:3000"
+    "baseUrl": "http://localhost:3000",
+    "apiUrl": "http://localhost:8887"
   },
   "uat": {
-    "baseUrl": "https://uat-practice.razvanvancea.ro"
+    "baseUrl": "https://uat-practice.razvanvancea.ro",
+    "apiUrl": "http://localhost:8887"
   },
   "production": {
-    "baseUrl": "https://qa-practice.razvanvancea.ro"
+    "baseUrl": "https://qa-practice.razvanvancea.ro",
+    "apiUrl": "http://localhost:8887"
   }
 }
