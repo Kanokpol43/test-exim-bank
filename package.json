@@ -15,6 +15,7 @@
     "test:shipping-detail:headed": "HEADED=true cucumber-js features/shipping-detail.feature",
     "test:e2e": "cucumber-js features/e2e.feature",
     "test:e2e:headed": "HEADED=true cucumber-js features/e2e.feature",
+    "test:api": "cucumber-js features/api-employees.feature",
     "test:report": "node scripts/generateReport.js"
   },
   "author": "",
@@ -27,5 +28,8 @@
     "cucumber-html-reporter": "^7.1.1",
     "dotenv": "^16.3.1",
     "playwright": "^1.40.0"
+  },
+  "dependencies": {
+    "axios": "^1.16.0"
   }
 }
