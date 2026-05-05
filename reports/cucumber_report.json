@@ -4,78 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "api---ระบบเพิ่มพนักงาน;post---สร้างพนักงานด้วย-email-ที่ถูกต้อง",
-        "keyword": "Scenario",
-        "line": 6,
-        "name": "POST - สร้างพนักงานด้วย email ที่ถูกต้อง",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 217874
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 175261082
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 25959
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 7,
-            "name": "ผู้ใช้ส่ง POST request สำหรับสร้าง employee ด้วย \"รูปแบบอีเมลถูกต้อง\"",
-            "match": {
-              "location": "features/step_definitions/api-employees.js:47"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 52741167
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "response status code ควรเป็น 201",
-            "match": {
-              "location": "features/step_definitions/api-employees.js:104"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1842125
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "api---ระบบเพิ่มพนักงาน;post---create-employee-with-invalid-email-format",
+        "id": "api---ระบบเพิ่มพนักงาน;case-2---post-create-employee-with-invalid-email-format",
         "keyword": "Scenario",
         "line": 10,
-        "name": "POST - Create employee with invalid email format",
+        "name": "Case 2 - POST Create employee with invalid email format",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 208166
+              "duration": 144083
             }
           },
           {
@@ -83,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 176553334
+              "duration": 514347166
             }
           },
           {
@@ -91,7 +30,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 24707
+              "duration": 28458
             }
           },
           {
@@ -100,11 +39,11 @@
             "line": 11,
             "name": "ผู้ใช้ส่ง POST request สำหรับสร้าง employee ด้วย \"รูปแบบอีเมลไม่ถูกต้อง\"",
             "match": {
-              "location": "features/step_definitions/api-employees.js:47"
+              "location": "features/step_definitions/api-employees.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 51819999
+              "duration": 87491042
             }
           },
           {
@@ -113,24 +52,24 @@
             "line": 12,
             "name": "response status code ควรเป็น 400",
             "match": {
-              "location": "features/step_definitions/api-employees.js:104"
+              "location": "features/step_definitions/api-helpers.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 1842957
+              "duration": 2132749
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "response body ควรมีข้อความ \"defaultMessage\"",
+            "name": "response body ควรมีข้อความ \"must be a well-formed email address\" ที่ Key \"defaultMessage\"",
             "match": {
-              "location": "features/step_definitions/api-employees.js:113"
+              "location": "features/step_definitions/api-helpers.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 1521916
+              "duration": 2056249
             }
           }
         ],
@@ -139,17 +78,17 @@
       },
       {
         "description": "",
-        "id": "api---ระบบเพิ่มพนักงาน;get---retrieve-existing-employee-by-id",
+        "id": "api---ระบบเพิ่มพนักงาน;case-3---get-retrieve-existing-employee-by-id",
         "keyword": "Scenario",
         "line": 15,
-        "name": "GET - Retrieve existing employee by ID",
+        "name": "Case 3 - GET Retrieve existing employee by ID",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16167
+              "duration": 16124
             }
           },
           {
@@ -157,7 +96,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 139113124
+              "duration": 147396290
             }
           },
           {
@@ -165,59 +104,46 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 16,
-            "name": "ผู้ใช้สร้าง employee ใหม่ก่อน",
-            "match": {
-              "location": "features/step_definitions/api-employees.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23736958
+              "duration": 21375
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 17,
-            "name": "ผู้ใช้ส่ง GET request สำหรับดึงข้อมูล 1",
+            "line": 16,
+            "name": "ผู้ใช้ส่ง GET request ด้วย ID 1",
             "match": {
-              "location": "features/step_definitions/api-employees.js:86"
+              "location": "features/step_definitions/api-employees.js:54"
             },
             "result": {
               "status": "passed",
-              "duration": 12577374
+              "duration": 75128917
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
+            "line": 17,
             "name": "response status code ควรเป็น 200",
             "match": {
-              "location": "features/step_definitions/api-employees.js:104"
+              "location": "features/step_definitions/api-helpers.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 473416
+              "duration": 440333
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 19,
+            "line": 18,
             "name": "response body ควรมี employee information",
             "match": {
-              "location": "features/step_definitions/api-employees.js:127"
+              "location": "features/step_definitions/api-employees.js:70"
             },
             "result": {
               "status": "passed",
-              "duration": 1054290
+              "duration": 1079790
             }
           }
         ],
@@ -226,17 +152,17 @@
       },
       {
         "description": "",
-        "id": "api---ระบบเพิ่มพนักงาน;get---employee-not-found",
+        "id": "api---ระบบเพิ่มพนักงาน;case-4---get-employee-not-found",
         "keyword": "Scenario",
-        "line": 21,
-        "name": "GET - Employee not found",
+        "line": 20,
+        "name": "Case 4 - GET Employee not found",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51791
+              "duration": 15791
             }
           },
           {
@@ -244,7 +170,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 136751416
+              "duration": 130894000
             }
           },
           {
@@ -252,46 +178,46 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 20792
+              "duration": 14124
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 22,
-            "name": "ผู้ใช้ส่ง GET request ด้วย id 50",
+            "line": 21,
+            "name": "ผู้ใช้ส่ง GET request ด้วย ID 55",
             "match": {
-              "location": "features/step_definitions/api-employees.js:95"
+              "location": "features/step_definitions/api-employees.js:54"
             },
             "result": {
               "status": "passed",
-              "duration": 18896917
+              "duration": 34887207
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 23,
+            "line": 22,
             "name": "response status code ควรเป็น 404",
             "match": {
-              "location": "features/step_definitions/api-employees.js:104"
+              "location": "features/step_definitions/api-helpers.js:38"
             },
             "result": {
               "status": "passed",
-              "duration": 454625
+              "duration": 446124
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 24,
+            "line": 23,
             "name": "response body ควรมีข้อความ \"Employee not found with ID\"",
             "match": {
-              "location": "features/step_definitions/api-employees.js:113"
+              "location": "features/step_definitions/api-helpers.js:42"
             },
             "result": {
               "status": "passed",
-              "duration": 285167
+              "duration": 1445334
             }
           }
         ],
