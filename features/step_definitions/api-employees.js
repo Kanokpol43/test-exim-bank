@@ -2,6 +2,7 @@ const { When, Then, Given, Before } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
 const axios = require("axios");
 const config = require("../../config.json");
+const { defineApiSteps } = require("./api-helpers");
 
 let faker;
 (async () => {
@@ -13,35 +14,16 @@ const getApiUrl = () => {
   return config[environment].apiUrl;
 };
 
+const ApiUrlEmployees = "/api/v1/employees";
+
 let lastResponseStatus;
 let lastResponseData;
-let lastEmployeeId;
+let lastCreatedId;
 
 Before(function () {
   lastResponseStatus = null;
   lastResponseData = null;
-  lastEmployeeId = null;
-});
-
-Given("ผู้ใช้สร้าง employee ใหม่ก่อน", async function () {
-  const apiUrl = getApiUrl();
-  const employeeData = {
-    dob: "2000-01-01",
-    email: `test${Date.now()}@example.com`,
-    firstName: "Test",
-    lastName: "User",
-  };
-
-  const response = await axios.post(
-    `${apiUrl}/api/v1/employees`,
-    employeeData,
-    {
-      validateStatus: () => true,
-    },
-  );
-  lastResponseStatus = response.status;
-  lastResponseData = response.data;
-  lastEmployeeId = response.data?.id;
+  lastCreatedId = null;
 });
 
 When(
@@ -58,71 +40,32 @@ When(
     };
 
     const response = await axios.post(
-      `${apiUrl}/api/v1/employees`,
+      `${apiUrl}${ApiUrlEmployees}`,
       employeeData,
       {
         validateStatus: () => true,
       },
     );
     lastResponseStatus = response.status;
-    lastResponseData = response.data || {};
-
-    if (isValidEmail) {
-      // ถ้า response body ว่าง ให้ดึง ID จาก Location header
-      if (response.headers.location) {
-        const locationMatch = response.headers.location.match(/\/(\d+)$/);
-        lastEmployeeId = locationMatch ? parseInt(locationMatch[1], 10) : null;
-      } else {
-        lastEmployeeId = response.data?.id;
-      }
-      // ถ้า response body ว่าง ให้ set ID เป็น object ว่างแต่มี id
-      if (!lastResponseData.id && lastEmployeeId) {
-        lastResponseData.id = lastEmployeeId;
-      }
-    }
+    lastResponseData = response.data;
   },
 );
 
-When("ผู้ใช้ส่ง GET request สำหรับดึงข้อมูล {int}", async function (id) {
-  const apiUrl = getApiUrl();
-  const response = await axios.get(`${apiUrl}/api/v1/employees/${id}`, {
+When("ผู้ใช้ส่ง GET request ด้วย ID {int}", async function (id) {
+  const response = await axios.get(`${getApiUrl()}${ApiUrlEmployees}/${id}`, {
     validateStatus: () => true,
   });
+
   lastResponseStatus = response.status;
   lastResponseData = response.data;
+  lastCreatedId = id;
 });
 
-When("ผู้ใช้ส่ง GET request ด้วย id {int}", async function (id) {
-  const apiUrl = getApiUrl();
-  const response = await axios.get(`${apiUrl}/api/v1/employees/${id}`, {
-    validateStatus: () => true,
-  });
-  lastResponseStatus = response.status;
-  lastResponseData = response.data;
-});
-
-Then("response status code ควรเป็น {int}", async function (expectedStatus) {
-  expect(lastResponseStatus).toBe(expectedStatus);
-});
-
-Then("response body ควรมี employee id", async function () {
-  expect(lastResponseData.id).toBeDefined();
-  expect(typeof lastResponseData.id).toBe("number");
-});
-
-Then("response body ควรมีข้อความ {string}", async function (fieldName) {
-  if (fieldName === "defaultMessage") {
-    const defaultMessage = lastResponseData?.errors?.[0]?.defaultMessage
-      || lastResponseData?.defaultMessage;
-    expect(defaultMessage).toBeDefined();
-    expect(defaultMessage).toContain("email");
-  } else if (fieldName === "Employee not found with ID") {
-    const message = typeof lastResponseData === "string"
-      ? lastResponseData
-      : lastResponseData?.message;
-    expect(message).toContain("Employee not found with ID");
-  }
-});
+defineApiSteps(
+  () => lastResponseStatus,
+  () => lastResponseData,
+  () => lastCreatedId
+);
 
 Then("response body ควรมี employee information", async function () {
   expect(lastResponseData.id).toBeDefined();
