@@ -135,7 +135,7 @@
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 18,
             "name": "response body ควรมี employee information",
             "match": {
