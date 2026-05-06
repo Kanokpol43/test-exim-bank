@@ -3,7 +3,7 @@ const { expect } = require("@playwright/test");
 const {
   selectRandomOption,
   checkValidationRequiredFill,
-} = require("./helpers");
+} = require("./ui-helpers");
 
 let faker;
 let shippingData = {

@@ -4,6 +4,67 @@
     "elements": [
       {
         "description": "",
+        "id": "api---ระบบเพิ่มพนักงาน;case-1---post-สร้างพนักงานด้วย-email-ที่ถูกต้อง",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Case 1 - POST สร้างพนักงานด้วย email ที่ถูกต้อง",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 144707
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 404203458
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 25415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "ผู้ใช้ส่ง POST request สำหรับสร้าง employee ด้วย \"รูปแบบอีเมลถูกต้อง\"",
+            "match": {
+              "location": "features/step_definitions/api-employees.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141099583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "response status code ควรเป็น 201",
+            "match": {
+              "location": "features/step_definitions/api-helpers.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2512375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "api---ระบบเพิ่มพนักงาน;case-2---post-create-employee-with-invalid-email-format",
         "keyword": "Scenario",
         "line": 10,
@@ -14,7 +75,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 144583
+              "duration": 29541
             }
           },
           {
@@ -22,7 +83,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 440353916
+              "duration": 152836000
             }
           },
           {
@@ -30,7 +91,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31750
+              "duration": 21249
             }
           },
           {
@@ -39,11 +100,11 @@
             "line": 11,
             "name": "ผู้ใช้ส่ง POST request สำหรับสร้าง employee ด้วย \"รูปแบบอีเมลไม่ถูกต้อง\"",
             "match": {
-              "location": "features/step_definitions/api-employees.js:29"
+              "location": "features/step_definitions/api-employees.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 167710916
+              "duration": 37248083
             }
           },
           {
@@ -52,11 +113,11 @@
             "line": 12,
             "name": "response status code ควรเป็น 400",
             "match": {
-              "location": "features/step_definitions/api-helpers.js:38"
+              "location": "features/step_definitions/api-helpers.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 2057666
+              "duration": 576500
             }
           },
           {
@@ -65,11 +126,11 @@
             "line": 13,
             "name": "response body ควรมีข้อความ \"must be a well-formed email address\" ที่ Key \"defaultMessage\"",
             "match": {
-              "location": "features/step_definitions/api-helpers.js:51"
+              "location": "features/step_definitions/api-helpers.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 2171958
+              "duration": 2404917
             }
           }
         ],
@@ -88,7 +149,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 25499
+              "duration": 95583
             }
           },
           {
@@ -96,7 +157,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 150421042
+              "duration": 143394250
             }
           },
           {
@@ -104,46 +165,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 26000
+              "duration": 18958
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Given ",
             "line": 16,
-            "name": "ผู้ใช้ส่ง GET request ด้วย ID 1",
+            "name": "ผู้ใช้ดึงข้อมูล employees ทั้งหมด",
             "match": {
-              "location": "features/step_definitions/api-employees.js:54"
+              "location": "features/step_definitions/api-employees.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 71016540
+              "duration": 42642208
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "And ",
             "line": 17,
-            "name": "response status code ควรเป็น 200",
+            "name": "ผู้ใช้ส่ง GET request ด้วย ID \"ที่มีอยู่\"",
             "match": {
-              "location": "features/step_definitions/api-helpers.js:38"
+              "location": "features/step_definitions/api-employees.js:61"
             },
             "result": {
               "status": "passed",
-              "duration": 488207
+              "duration": 33361666
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 18,
-            "name": "response body ควรมี employee information",
+            "name": "response status code ควรเป็น 200",
             "match": {
-              "location": "features/step_definitions/api-employees.js:70"
+              "location": "features/step_definitions/api-helpers.js:13"
             },
             "result": {
               "status": "passed",
-              "duration": 1155749
+              "duration": 260250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "response body ควรมี employee information",
+            "match": {
+              "location": "features/step_definitions/api-employees.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1293875
             }
           }
         ],
@@ -154,7 +228,7 @@
         "description": "",
         "id": "api---ระบบเพิ่มพนักงาน;case-4---get-employee-not-found",
         "keyword": "Scenario",
-        "line": 20,
+        "line": 21,
         "name": "Case 4 - GET Employee not found",
         "steps": [
           {
@@ -162,7 +236,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 21457
+              "duration": 15583
             }
           },
           {
@@ -170,7 +244,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 139968209
+              "duration": 141254582
             }
           },
           {
@@ -178,46 +252,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 16624
+              "duration": 15916
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "ผู้ใช้ส่ง GET request ด้วย ID 55",
-            "match": {
-              "location": "features/step_definitions/api-employees.js:54"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 13943792
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
+            "keyword": "Given ",
             "line": 22,
-            "name": "response status code ควรเป็น 404",
+            "name": "ผู้ใช้ดึงข้อมูล employees ทั้งหมด",
             "match": {
-              "location": "features/step_definitions/api-helpers.js:38"
+              "location": "features/step_definitions/api-employees.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 561500
+              "duration": 26766082
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 23,
-            "name": "response body ควรมีข้อความ \"Employee not found with ID\"",
+            "name": "ผู้ใช้ส่ง GET request ด้วย ID \"ที่ไม่มีอยู่\"",
             "match": {
-              "location": "features/step_definitions/api-helpers.js:42"
+              "location": "features/step_definitions/api-employees.js:61"
             },
             "result": {
               "status": "passed",
-              "duration": 1706249
+              "duration": 39068582
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "response status code ควรเป็น 404",
+            "match": {
+              "location": "features/step_definitions/api-helpers.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 272165
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "response body ควรมีข้อความ \"Employee not found with ID\"",
+            "match": {
+              "location": "features/step_definitions/api-helpers.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 899457
             }
           }
         ],
@@ -231,2481 +318,5 @@
     "name": "API - ระบบเพิ่มพนักงาน",
     "tags": [],
     "uri": "features/api-employees.feature"
-  },
-  {
-    "description": "    As a ผู้ใช้\n    I want to เข้าสู่ระบบเพื่อทำการสั่งซื้อสินค้าจากเริ่มต้น\n    So that ฉันสามารถยืนยันคำสั่งซื้อและได้รับการยืนยันที่อยู่ที่ถูกต้อง",
-    "elements": [
-      {
-        "description": "",
-        "id": "e2e---สั่งซื้อสินค้า;e2e---step-1-4-complete-checkout-flow",
-        "keyword": "Scenario",
-        "line": 6,
-        "name": "E2E - Step 1-4 Complete Checkout Flow",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 24625
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 129452708
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 8,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1325489084
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 45200209
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36119707
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31412499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2216957
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 2 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 330518790
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 16,
-            "name": "ผู้ใช้เลือกสินค้า \"Gucci Bloom Eau de\" จำนวน 3 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27748790
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 17,
-            "name": "ยอดรวมควรมีราคา 419.95",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1207332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 18,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25881584
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2055624
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 22,
-            "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6911125
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 23,
-            "name": "ผู้ใช้กรอกที่อยู่",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5851874
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "ผู้ใช้กรอกชื่อเมือง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4783374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 25,
-            "name": "ผู้ใช้เลือกประเทศ",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19573499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 26,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21658750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 29,
-            "name": "ผู้ใช้ควรเจอหน้าสรุปที่อยู่ถูกต้อง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:59"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1970959
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "e2e---สั่งซื้อสินค้า",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "E2E - สั่งซื้อสินค้า",
-    "tags": [],
-    "uri": "features/e2e.feature"
-  },
-  {
-    "description": "  As a ผู้ใช้\n  I want to เข้าสู่ระบบแอปพลิเคชันโอการค้า\n  So that ฉันสามารถเข้าใช้งานร้านค้า",
-    "elements": [
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;case-1---กรอกข้อมูลถูกทั้งหมด-(จาก-example.json)",
-        "keyword": "Scenario",
-        "line": 9,
-        "name": "Case 1 - กรอกข้อมูลถูกทั้งหมด (จาก example.json)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9082
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 130055666
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1254583750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34211374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34899290
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21111583
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1985499
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "keyword": "Scenario Outline",
-        "line": 23,
-        "name": "เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10584
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 132508750
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 12458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1277418624
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 33584791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 39401582
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19755083
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4107209
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "keyword": "Scenario Outline",
-        "line": 27,
-        "name": "เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9250
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 143860708
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9124
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1341061499
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "ผู้ใช้กรอกอีเมล \"wrongemail@example.com\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32749332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35273457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21970750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3021416
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "keyword": "Scenario Outline",
-        "line": 31,
-        "name": "เข้าสู่ระบบล้มเหลวด้วยข้อมูลต่างๆ",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11582
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 129709542
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 13667
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1297482541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "ผู้ใช้กรอกอีเมล \"wrongemail@example.com\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31811999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"wrongpassword\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32169374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19900417
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3272208
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;case-5---กรอกเฉพาะข้อมูลอีเมล",
-        "keyword": "Scenario",
-        "line": 33,
-        "name": "Case 5 - กรอกเฉพาะข้อมูลอีเมล",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11209
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 131639541
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10333
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1336400666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 34,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32115500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 35,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17685041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3033166
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เข้าสู่ระบบ;case-6---กรอกเฉพาะข้อมูลรหัสผ่าน",
-        "keyword": "Scenario",
-        "line": 38,
-        "name": "Case 6 - กรอกเฉพาะข้อมูลรหัสผ่าน",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 12915
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 124529791
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1352976791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 39,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 61388124
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 40,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24716582
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 41,
-            "name": "ผู้ใช้ควรเห็นข้อความแสดงข้อผิดพลาด",
-            "match": {
-              "location": "features/step_definitions/login.js:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2973415
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "เข้าสู่ระบบ",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "เข้าสู่ระบบ",
-    "tags": [],
-    "uri": "features/login.feature"
-  },
-  {
-    "description": "    As a ผู้ใช้\n    I want to กรอกข้อมูลจัดส่ง\n    So that ฉันสามารถยืนยันคำสั่งซื้อได้",
-    "elements": [
-      {
-        "description": "",
-        "id": "จัดส่งสินค้า;case-1---กรอกข้อมูลจัดส่งครบถ้วน-(phone,-street,-city,-country)",
-        "keyword": "Scenario",
-        "line": 16,
-        "name": "Case 1 - กรอกข้อมูลจัดส่งครบถ้วน (Phone, Street, City, Country)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9457
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 147116334
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9790
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1341576042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32470500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36713084
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23380041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1402375
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 835093124
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 18131167
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1167624
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4122833
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "ผู้ใช้กรอกที่อยู่",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3693457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 19,
-            "name": "ผู้ใช้กรอกชื่อเมือง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3620667
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 20,
-            "name": "ผู้ใช้เลือกประเทศ",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17628167
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17282957
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 22,
-            "name": "ผู้ใช้ควรเจอหน้าสรุปที่อยู่ถูกต้อง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:59"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1379458
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "จัดส่งสินค้า;case-2---ไม่กรอกเบอร์โทรศัพท์",
-        "keyword": "Scenario",
-        "line": 24,
-        "name": "Case 2 - ไม่กรอกเบอร์โทรศัพท์",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9834
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 128540375
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1297637958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 31380625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35159207
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26104624
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1573250
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 341191791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 20810042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1158832
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 25,
-            "name": "ผู้ใช้กรอกที่อยู่",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4272165
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
-            "name": "ผู้ใช้กรอกชื่อเมือง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3658957
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 27,
-            "name": "ผู้ใช้เลือกประเทศ",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17324834
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30394958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 29,
-            "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"#phone\"",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6468332
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "จัดส่งสินค้า;case-3---ไม่กรอกที่อยู่",
-        "keyword": "Scenario",
-        "line": 31,
-        "name": "Case 3 - ไม่กรอกที่อยู่",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 13084
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 139405542
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 12833
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1302081291
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27580374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 41480332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 18249375
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2636249
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 309414666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 20525709
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1629082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 32,
-            "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4769457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 33,
-            "name": "ผู้ใช้กรอกชื่อเมือง",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5821082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 34,
-            "name": "ผู้ใช้เลือกประเทศ",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17627291
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 35,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22862042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"[name='street']\"",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3521333
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "จัดส่งสินค้า;case-4---ไม่กรอกชื่อเมือง",
-        "keyword": "Scenario",
-        "line": 38,
-        "name": "Case 4 - ไม่กรอกชื่อเมือง",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11083
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 166964125
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 8541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1226793000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 32673834
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 45744333
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 25895375
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1973541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 309079165
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28079207
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2148791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 39,
-            "name": "ผู้ใช้กรอกเบอร์โทรศัพท์",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:26"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5574583
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 40,
-            "name": "ผู้ใช้กรอกที่อยู่",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9329041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 41,
-            "name": "ผู้ใช้เลือกประเทศ",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22509833
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 42,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28192500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 43,
-            "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"[name='city']\"",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3331500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "จัดส่งสินค้า;case-5---ไม่กรอกข้อมูลใดเลย",
-        "keyword": "Scenario",
-        "line": 45,
-        "name": "Case 5 - ไม่กรอกข้อมูลใดเลย",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11625
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 189146249
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 16375
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1332339541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 34235041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 46847916
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26375584
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1825166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 12,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 339574666
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24917625
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1977000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 46,
-            "name": "ผู้ใช้คลิกปุ่ม Submit Order",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 23357374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 47,
-            "name": "ผู้ใช้ควรเจอ Required Message สำหรับ \"#phone\"",
-            "match": {
-              "location": "features/step_definitions/shipping-detail.js:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 17629457
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "จัดส่งสินค้า",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "จัดส่งสินค้า",
-    "tags": [],
-    "uri": "features/shipping-detail.feature"
-  },
-  {
-    "description": "  As a ผู้ใช้\n  I want to เลือกสินค้าจากร้านค้า\n  So that ฉันสามารถเลือกสินค้าและพาไปหน้าชำระเงินได้",
-    "elements": [
-      {
-        "description": "",
-        "id": "เลือกสินค้า;case-1---เลือกสินค้าถูกต้อง-(dior-2-units-+-gucci-3-units)",
-        "keyword": "Scenario",
-        "line": 13,
-        "name": "Case 1 - เลือกสินค้าถูกต้อง (Dior 2 units + Gucci 3 units)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 12791
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 199297042
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 10333
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1273678041
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35218042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 50590916
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30430957
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1589790
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 14,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 2 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 323672750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 15,
-            "name": "ผู้ใช้เลือกสินค้า \"Gucci Bloom Eau de\" จำนวน 3 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26926208
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "ยอดรวมควรมีราคา 419.95",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 367458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 30264374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 18,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1898625
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เลือกสินค้า;case-2---เลือกสินค้าถูกต้อง-(dior-2-units)",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Case 2 - เลือกสินค้าถูกต้อง (Dior 2 units)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 13917
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 216339374
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11583
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1329458500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 37959040
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 44659792
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 36209958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1807749
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "ผู้ใช้เลือกสินค้า \"Dior J'adore\" จำนวน 2 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 830457958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 22,
-            "name": "ยอดรวมควรมีราคา 179.98",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 261458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 23,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 24187874
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2336707
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เลือกสินค้า;case-3---เลือกสินค้าถูกต้อง-(gucci-3-units)",
-        "keyword": "Scenario",
-        "line": 27,
-        "name": "Case 3 - เลือกสินค้าถูกต้อง (Gucci 3 units)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 23333
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 195490207
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 17084
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1276990916
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 38318082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 44611790
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28391332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3862207
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 28,
-            "name": "ผู้ใช้เลือกสินค้า \"Gucci Bloom Eau de\" จำนวน 3 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 315432082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 29,
-            "name": "ยอดรวมควรมีราคา 239.97",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 411791
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 30,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26164958
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 31,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1841082
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "เลือกสินค้า;case-4---เลือกสินค้าถูกต้อง-(red-lipstick-1-units)",
-        "keyword": "Scenario",
-        "line": 34,
-        "name": "Case 4 - เลือกสินค้าถูกต้อง (Red Lipstick 1 units)",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 9207
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 203050417
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 28374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "ผู้ใช้นำทางไปยังหน้า Login",
-            "match": {
-              "location": "features/step_definitions/login.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1244413042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "ผู้ใช้กรอกอีเมล \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 39404457
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 9,
-            "name": "ผู้ใช้กรอกรหัสผ่าน \"default\"",
-            "match": {
-              "location": "features/step_definitions/login.js:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 47722708
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "ผู้ใช้คลิกปุ่มเข้าสู่ระบบ",
-            "match": {
-              "location": "features/step_definitions/login.js:45"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 28853500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 11,
-            "name": "ผู้ใช้ควรเห็นหน้าร้านค้า",
-            "match": {
-              "location": "features/step_definitions/login.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1834917
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 35,
-            "name": "ผู้ใช้เลือกสินค้า \"Red Lipstick\" จำนวน 1 ชิ้น",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:12"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 334773166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 36,
-            "name": "ยอดรวมควรมีราคา 12.99",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1947374
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 37,
-            "name": "ผู้ใช้คลิกปุ่ม \"PROCEED TO CHECKOUT\"",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 26478917
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 38,
-            "name": "ผู้ใช้ควรเห็นหน้ารายละเอียดจัดส่งสินค้า",
-            "match": {
-              "location": "features/step_definitions/shopping-cart.js:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2016374
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "เลือกสินค้า",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "เลือกสินค้า",
-    "tags": [],
-    "uri": "features/shopping-cart.feature"
   }
 ]

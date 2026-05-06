@@ -9,9 +9,10 @@ const getBaseUrl = () => {
   return config[environment].baseUrl;
 };
 
+const pageUrlAuth = "/auth_ecommerce.html";
+
 const loginAndNavigateToShop = async (page) => {
-  const baseUrl = getBaseUrl();
-  await page.goto(`${baseUrl}/auth_ecommerce.html`);
+  await page.goto(`${getBaseUrl()}${pageUrlAuth}`);
   await page.locator("#email").waitFor({ state: "visible" });
 
   const emailValue = testData.login.email;
@@ -25,8 +26,7 @@ const loginAndNavigateToShop = async (page) => {
 };
 
 Given("ผู้ใช้นำทางไปยังหน้า Login", async function () {
-  const baseUrl = getBaseUrl();
-  await this.page.goto(`${baseUrl}/auth_ecommerce.html`);
+  await this.page.goto(`${getBaseUrl()}${pageUrlAuth}`);
 });
 
 When("ผู้ใช้กรอกอีเมล {string}", async function (email) {
