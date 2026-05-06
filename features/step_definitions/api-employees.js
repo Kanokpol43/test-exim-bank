@@ -2,7 +2,7 @@ const { When, Then, Given, Before } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
 const axios = require("axios");
 const config = require("../../config.json");
-const { defineApiSteps } = require("./api-helpers");
+const { getMessage, defineApiSteps } = require("./api-helpers");
 
 let faker;
 (async () => {
@@ -19,28 +19,30 @@ const ApiUrlEmployees = "/api/v1/employees";
 let lastResponseStatus;
 let lastResponseData;
 let lastCreatedId;
+let employeesId = [];
 
 Before(function () {
   lastResponseStatus = null;
   lastResponseData = null;
   lastCreatedId = null;
+  employeesId = [];
 });
 
 When(
   "ผู้ใช้ส่ง POST request สำหรับสร้าง employee ด้วย {string}",
   async function (emailFormat) {
-    const apiUrl = getApiUrl();
-    const isValidEmail = emailFormat === "รูปแบบอีเมลถูกต้อง";
-
     const employeeData = {
       dob: "2000-05-15",
-      email: isValidEmail ? faker.faker.internet.email() : "invalid-email",
+      email:
+        emailFormat === "รูปแบบอีเมลถูกต้อง"
+          ? faker.faker.internet.email()
+          : "invalid-email",
       firstName: faker.faker.person.firstName(),
       lastName: faker.faker.person.lastName(),
     };
 
     const response = await axios.post(
-      `${apiUrl}${ApiUrlEmployees}`,
+      `${getApiUrl()}${ApiUrlEmployees}`,
       employeeData,
       {
         validateStatus: () => true,
@@ -51,20 +53,36 @@ When(
   },
 );
 
-When("ผู้ใช้ส่ง GET request ด้วย ID {int}", async function (id) {
-  const response = await axios.get(`${getApiUrl()}${ApiUrlEmployees}/${id}`, {
-    validateStatus: () => true,
-  });
+When("ผู้ใช้ดึงข้อมูล employees ทั้งหมด", async function () {
+  const response = await axios.get(`${getApiUrl()}${ApiUrlEmployees}`, {});
+  employeesId = response.data.map((emp) => emp.id);
+});
+
+When("ผู้ใช้ส่ง GET request ด้วย ID {string}", async function (idType) {
+  let idToUse;
+
+  if (idType === "ที่มีอยู่") {
+    idToUse = employeesId[0];
+  } else if (idType === "ที่ไม่มีอยู่") {
+    idToUse = Math.max(...employeesId) + 1;
+  }
+
+  const response = await axios.get(
+    `${getApiUrl()}${ApiUrlEmployees}/${idToUse}`,
+    {
+      validateStatus: () => true,
+    },
+  );
 
   lastResponseStatus = response.status;
   lastResponseData = response.data;
-  lastCreatedId = id;
+  lastCreatedId = idToUse;
 });
 
 defineApiSteps(
   () => lastResponseStatus,
   () => lastResponseData,
-  () => lastCreatedId
+  () => lastCreatedId,
 );
 
 Then("response body ควรมี employee information", async function () {
