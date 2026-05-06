@@ -2,11 +2,7 @@ const { When, Then, Given, Before } = require("@cucumber/cucumber");
 const { expect } = require("@playwright/test");
 const axios = require("axios");
 const config = require("../../config.json");
-<<<<<<< HEAD
 const { getMessage, defineApiSteps } = require("./api-helpers");
-=======
-const { defineApiSteps } = require("./api-helpers");
->>>>>>> origin/develop
 
 let faker;
 (async () => {
@@ -23,19 +19,13 @@ const ApiUrlEmployees = "/api/v1/employees";
 let lastResponseStatus;
 let lastResponseData;
 let lastCreatedId;
-<<<<<<< HEAD
 let employeesId = [];
-=======
->>>>>>> origin/develop
 
 Before(function () {
   lastResponseStatus = null;
   lastResponseData = null;
   lastCreatedId = null;
-<<<<<<< HEAD
   employeesId = [];
-=======
->>>>>>> origin/develop
 });
 
 When(
@@ -52,11 +42,7 @@ When(
     };
 
     const response = await axios.post(
-<<<<<<< HEAD
       `${getApiUrl()}${ApiUrlEmployees}`,
-=======
-      `${apiUrl}${ApiUrlEmployees}`,
->>>>>>> origin/develop
       employeeData,
       {
         validateStatus: () => true,
@@ -67,7 +53,6 @@ When(
   },
 );
 
-<<<<<<< HEAD
 When("ผู้ใช้ดึงข้อมูล employees ทั้งหมด", async function () {
   const response = await axios.get(`${getApiUrl()}${ApiUrlEmployees}`, {});
   employeesId = response.data.map((emp) => emp.id);
@@ -93,23 +78,6 @@ When("ผู้ใช้ส่ง GET request ด้วย ID {string}", async f
   lastResponseData = response.data;
   lastCreatedId = idToUse;
 });
-=======
-When("ผู้ใช้ส่ง GET request ด้วย ID {int}", async function (id) {
-  const response = await axios.get(`${getApiUrl()}${ApiUrlEmployees}/${id}`, {
-    validateStatus: () => true,
-  });
-
-  lastResponseStatus = response.status;
-  lastResponseData = response.data;
-  lastCreatedId = id;
-});
-
-defineApiSteps(
-  () => lastResponseStatus,
-  () => lastResponseData,
-  () => lastCreatedId
-);
->>>>>>> origin/develop
 
 defineApiSteps(
   () => lastResponseStatus,
