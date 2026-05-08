@@ -15,10 +15,18 @@ Before(async function () {
   this.page.setDefaultNavigationTimeout(60000); // 60s for page navigation
 });
 
-// After(async function () {
-//   await new Promise((resolve) => setTimeout(resolve, 1000));
+After(async function ({ result }) {
+  if (result.status === "FAILED") {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const screenshotPath = `reports/screenshots/error-${timestamp}.png`;
 
-//   if (this.page) await this.page.close();
-//   if (this.context) await this.context.close();
-//   if (this.browser) await this.browser.close();
-// });
+    if (this.page) {
+      await this.page.screenshot({ path: screenshotPath });
+      console.log(`Screenshot saved: ${screenshotPath}`);
+    }
+  }
+
+  if (this.page) await this.page.close();
+  if (this.context) await this.context.close();
+  if (this.browser) await this.browser.close();
+});

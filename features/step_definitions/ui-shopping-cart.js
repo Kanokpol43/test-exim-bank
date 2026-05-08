@@ -12,6 +12,21 @@ Before(function () {
 When(
   "ผู้ใช้เลือกสินค้า {string} จำนวน {int} ชิ้น",
   async function (productName, quantity) {
+    try {
+      await this.page.waitForFunction(
+        () => {
+          return document.querySelectorAll(".shop-item").length > 0;
+        },
+        { timeout: 5000 },
+      );
+    } catch (error) {
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+      await this.page.screenshot({
+        path: `reports/screenshots/shop-items-not-found-${timestamp}.png`,
+      });
+      throw error;
+    }
+
     const productElement = this.page
       .locator(".shop-item")
       .filter({ hasText: productName });
